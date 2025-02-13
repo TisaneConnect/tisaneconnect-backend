@@ -1,7 +1,6 @@
 const express = require("express");
 const db = require("../config/db");
 const verifyToken = require("../middleware/authMiddleware");
-
 const router = express.Router();
 
 // Get all users (hanya superadmin)

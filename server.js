@@ -6,6 +6,10 @@ const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
 const processRoutes = require("./routes/processRoutes");
 const itemRoutes = require("./routes/itemRoutes");
+const jenisRoutes = require("./routes/jenisRoutes");
+const platformRoutes = require("./routes/platformRoutes");
+const tokoRoutes = require("./routes/tokoRoutes");
+const ekspedisiRoutes = require("./routes/ekspedisiRoutes");
 
 const app = express();
 const PORT = 5000;
@@ -18,7 +22,11 @@ app.use(cors());
 app.use("/auth", authRoutes);
 app.use("/users", userRoutes);
 app.use("/process", processRoutes);
-app.use("/items", itemRoutes);
+app.use("/item", itemRoutes);
+app.use("/jenis", jenisRoutes);
+app.use("/platform", platformRoutes);
+app.use("/toko", tokoRoutes);
+app.use("/ekspedisi", ekspedisiRoutes);
 
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running on port ${PORT}`);
